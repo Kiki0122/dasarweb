@@ -1,0 +1,11 @@
+
+.tulisan_warna {
+    color: blue;
+    text-align: center;
+    text-underline-offset: 200px;
+    letter-spacing: 5px;
+}
+.par1 {
+    text-decoration: underline;
+    letter-spacing: 5px; 
+}

@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #cf4f4f;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+.container-satu {
+    width: 800px;
+    margin: 50px auto; 
+    background-color: #485bec;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex; 
+}
+
+.sidebar-satu, .kolom-utama, .sidebar-dua {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar-satu {
+    flex: 1; 
+    order: 1; 
+    background-color: #2b0a0a; 
+    color: white;
+}
+
+.kolom-utama {
+    flex: 3; 
+    order: 2; 
+    background-color: #ffffff; 
+    color: #333;
+}
+
+.sidebar-dua {
+    flex: 1; 
+    order: 3; 
+    background-color: #ff5722; 
+    color: white;
+}
+
+.sidebar-dua img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; 
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    color: rgb(231, 23, 23);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
