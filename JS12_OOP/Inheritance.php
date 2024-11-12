@@ -1,41 +1,32 @@
 <?php
 class Animal
 {
-    protected $name;
+    public $name;
+    protected $age;
+    private $color;
 
-    public function __construct($name) {
+    public function __construct($name, $age, $color) {
         $this->name = $name;
+        $this->age = $age;
+        $this->color = $color;
     }
 
-    public function eat() {
-        echo $this->name . " is eating.<br>";
+    public function getName() {
+        return $this->name;
     }
 
-    public function sleep() {
-        echo $this->name . " is sleeping.<br>";
+    protected function getAge() {
+        return $this->age;
     }
-}
 
-class Cat extends Animal
-{
-    public function meow() {
-        echo $this->name . " says meow!<br>";
-    }
-}
-
-class Dog extends Animal
-{
-    public function bark() {
-        echo $this->name . " says woof!<br>";
+    private function getColor() {
+        return $this->color;
     }
 }
 
-$cat = new Cat("Whiskers");
-$dog = new Dog("Buddy");
+$animal = new Animal("Dog", 3, "Brown");
 
-$cat->eat();
-$dog->sleep();
-
-$cat->meow();
-$dog->bark();
+echo "Name: " . $animal->getName() . "<br>";
+// Attempting to access protected and private methods from outside the class will cause errors.
+// To access `getAge()` and `getColor()`, you would need public methods or extend this class.
 ?>
