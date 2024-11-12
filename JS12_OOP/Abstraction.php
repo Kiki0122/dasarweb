@@ -1,10 +1,10 @@
 <?php
-interface Shapee
+abstract class Shape
 {
-    public function calculateArea();
+    abstract public function calculateArea();
 }
 
-class Circlee implements Shapee
+class Circle extends Shape
 {
     private $radius;
 
@@ -17,7 +17,7 @@ class Circlee implements Shapee
     }
 }
 
-class Rectangle implements Shapee
+class Rectangle extends Shape
 {
     private $width;
     private $height;
@@ -32,13 +32,9 @@ class Rectangle implements Shapee
     }
 }
 
-function printArea(Shapee $shapee) {
-    echo "Area: " . $shapee->calculateArea() . "<br>";
-}
-
-$circle = new Circlee(5);
+$circle = new Circle(5);
 $rectangle = new Rectangle(4, 6);
 
-printArea($circlee);
-printArea($rectangle);
+echo "Area of Circle: " . $circle->calculateArea() . "<br>";
+echo "Area of Rectangle: " . $rectangle->calculateArea() . "<br>";
 ?>
