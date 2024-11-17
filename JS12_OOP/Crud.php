@@ -8,13 +8,11 @@ class Crud {
         $this->db = new Database();
     }
 
-    // Create
     public function create($jabatan, $keterangan) {
         $query = "INSERT INTO jabatan (jabatan, keterangan) VALUES ('$jabatan', '$keterangan')";
         return $this->db->conn->query($query);
     }
 
-    // Read
     public function read() {
         $query = "SELECT * FROM jabatan";
         $result = $this->db->conn->query($query);
@@ -27,15 +25,12 @@ class Crud {
         }
         return $data;
     }
-
-    // Read By Id
     public function readById($id) {
         $query = "SELECT * FROM jabatan WHERE id = $id";
         $result = $this->db->conn->query($query);
         return $result->num_rows == 1 ? $result->fetch_assoc() : null;
     }
 
-    // Update
     public function update($id, $jabatan, $keterangan) {
         $query = "UPDATE jabatan SET jabatan = '$jabatan', keterangan = '$keterangan' WHERE id = $id";
         return $this->db->conn->query($query);
